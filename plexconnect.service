@@ -1,0 +1,10 @@
+[Unit]
+Description=PlexConnect for Linux
+After=network.target plexmediaservice.target
+Wants=plexmediaservice.target
+[Service]
+WorkingDirectory=/usr/local/lib/PlexConnect
+ExecStart=/usr/bin/python /usr/local/lib/PlexConnect/PlexConnect.py
+Type=simple
+[Install]
+WantedBy=multi-user.target
